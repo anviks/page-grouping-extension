@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Page grouper",
+  "description": "Group pages (almost like bookmarks) and open them all at once",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "bookmarks"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "pictures/troll-no-bg.png",
+      "32": "pictures/troll-no-bg.png",
+      "64": "pictures/troll-no-bg.png",
+      "128": "pictures/troll-no-bg.png"
+    }
+  },
+  "icons": {
+    "16": "pictures/troll-no-bg.png",
+    "32": "pictures/troll-no-bg.png",
+    "64": "pictures/troll-no-bg.png",
+    "128": "pictures/troll-no-bg.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/helpers/observers.js",
+        "scripts/youtube_upload_helper.js"
+      ],
+      "matches": [
+        "https://studio.youtube.com/channel/*"
+      ]
+    }
+  ]
+}
